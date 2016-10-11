@@ -1,16 +1,28 @@
-angular.module('tubeVisualiserApp', ['ui.bootstrap'])
-.controller('mainController', function($scope) {
+angular.module('ui.bootstrap.demo', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
+angular.module('ui.bootstrap.demo').controller('AccordionDemoCtrl', function ($scope) {
+  $scope.oneAtATime = true;
 
-  // BUTTONS ======================
+  $scope.groups = [
+    {
+      title: 'Dynamic Group Header - 1',
+      content: 'Dynamic Group Body - 1'
+    },
+    {
+      title: 'Dynamic Group Header - 2',
+      content: 'Dynamic Group Body - 2'
+    }
+  ];
 
-  // define some random object and button values
-  $scope.bigData = {};
+  $scope.items = ['Item 1', 'Item 2', 'Item 3'];
 
-  $scope.bigData.breakfast = false;
-  $scope.bigData.lunch = false;
-  $scope.bigData.dinner = false;
+  $scope.addItem = function() {
+    var newItemNo = $scope.items.length + 1;
+    $scope.items.push('Item ' + newItemNo);
+  };
 
-  // COLLAPSE =====================
-  $scope.isCollapsed = false;
-
+  $scope.status = {
+    isCustomHeaderOpen: false,
+    isFirstOpen: true,
+    isFirstDisabled: false
+  };
 });
