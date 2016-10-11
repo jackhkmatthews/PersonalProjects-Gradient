@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jackhkmatthews/PersonalProjects-TubeDataVisualiser#readme",
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-bootstrap": "^2.2.0",
     "express": "^4.14.0"
   }
 }
