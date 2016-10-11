@@ -1,5 +1,27 @@
-angular.module('ui.bootstrap.demo', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
-angular.module('ui.bootstrap.demo').controller('AccordionDemoCtrl', function ($scope) {
+angular.module('tubeVisualiserApp', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
+angular.module('tubeVisualiserApp').controller('ButtonsCtrl', function ($scope) {
+  $scope.singleModel = 1;
+
+  $scope.radioModel = 'Middle';
+
+  $scope.checkModel = {
+    left: false,
+    middle: true,
+    right: false
+  };
+
+  $scope.checkResults = [];
+
+  $scope.$watchCollection('checkModel', function () {
+    $scope.checkResults = [];
+    angular.forEach($scope.checkModel, function (value, key) {
+      if (value) {
+        $scope.checkResults.push(key);
+      }
+    });
+  });
+});
+angular.module('tubeVisualiserApp').controller('AccordionDemoCtrl', function ($scope) {
   $scope.oneAtATime = true;
 
   $scope.groups = [
@@ -25,4 +47,10 @@ angular.module('ui.bootstrap.demo').controller('AccordionDemoCtrl', function ($s
     isFirstOpen: true,
     isFirstDisabled: false
   };
+});
+angular.module('tubeVisualiserApp').controller('CollapseDemoCtrl', function ($scope) {
+  $scope.isNavCollapsed = true;
+  $scope.isCollapsed = true;
+  $scope.isCollapsed2 = true;
+  $scope.isCollapsedHorizontal = false;
 });
