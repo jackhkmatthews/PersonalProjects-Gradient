@@ -50,7 +50,7 @@ angular.module('ui.bootstrap.demo').controller('AccordionDemoCtrl', function ($s
 });
 angular.module('ui.bootstrap.demo').controller('CollapseDemoCtrl', function ($scope) {
   $scope.isNavCollapsed = true;
-  $scope.isCollapsed = true;
-  $scope.isCollapsed2 = true;
+  $scope.isCollapsed = false;
+  $scope.isCollapsed2 = false;
   $scope.isCollapsedHorizontal = false;
 });
