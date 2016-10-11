@@ -1,0 +1,8 @@
+.accordion-container {
+  width: 400px;
+  margin: 20px auto;
+}
+
+.well.well-lg {
+  margin-bottom: 0;
+}
