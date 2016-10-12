@@ -9,12 +9,13 @@
     <script src="scripts/directives/tube-visualiser.js"></script>
     <script src="scripts/controllers/ButtonsCtrl.js"></script>
     <script src="scripts/controllers/CollapseDemoCtrl.js"></script>
+    <script src="scripts/controllers/mainCtrl.js"></script>
     <link href="vendor/bootstrap.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
   </head>
   <body>
-    <tube-visualiser></tube-visualiser>
-    <!-- <div class="app-container">
+    <!-- <tube-visualiser></tube-visualiser> -->
+    <div class="app-container" ng-controller="mainCtrl">
     <div>
       <hr>
       <button type="button" class="btn btn-default gradient-collapse" ng-click="isCollapsed = !isCollapsed" style="width: 100%;">GRADIENT</button>
@@ -22,15 +23,13 @@
 
         <div class="well well-lg gradient-container">
           <div class="btn-group gradient">
-            <button class="btn btn-primary refresh">Refresh</button>
+            <button class="btn btn-primary refresh" ng-click="sayHello()"  ng-click="changeBackgroundColour()">Refresh</button>
             <button class="btn btn-primary rgba">rgba</button>
           </div>
         </div>
         <button type="button" class="btn btn-default cookie-collapse" ng-click="isCollapsed2 = !isCollapsed2" style="width: 100%;">COOKIE</button>
         <div uib-collapse="isCollapsed2">
           <div class="well well-lg cookie-container">
-            THE COOKIE
-            <br>
           <div class="btn-group cookie">
             <button class="btn btn-primary update">Update</button>
             <button class="btn btn-primary save">Save</button>
@@ -40,7 +39,6 @@
         </div>
      </div>
     </div>
-    </div> -->
-
+    </div>
   </body>
 </html>

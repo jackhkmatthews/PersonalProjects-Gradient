@@ -4,12 +4,10 @@
 }
 
 .well.well-lg {
-  margin-bottom: 0;
+  padding: 0;
 }
 
-button.gradient-collapse {
-
-}
+button.gradient-collapse {border-radius: 4px 4px 0px 0px;}
 
 div.gradient-container {
   margin: 0;
@@ -18,19 +16,27 @@ div.gradient-container {
   border-radius: 0;
 }
 
-.btn-group.gradient{
+.btn-group.gradient{top: 125px;left: 137px;}
 
-top: 265px;
+button.cookie-collapse{border-radius: 0px;}
+
+div.cookie-container{height: 300px;margin-bottom: 0px;border-radius: 0px 0px 4px 4px;}
+
+.btn-group.cookie{
+ top: 264px;
 }
 
-button.cookie-collapse{
-
+.btn-group.cookie button{
+ width: 133px;
 }
 
-div.cookie-container{
 
+button.btn.btn-primary.delete {
+    border-radius: 0px 0px 2px 0px;
+    width: 134px;
 }
 
-btn-group.cookie{
-
+button.btn.btn-primary.update {
+    border-radius: 0px 0px 0px 2px;
+    width: 133px;
 }
