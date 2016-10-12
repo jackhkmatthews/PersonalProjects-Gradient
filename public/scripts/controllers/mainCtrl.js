@@ -6,8 +6,13 @@ angular.module('tubeVisualiserApp')
   $scope.sayHello = function() {
     console.log("hello")
   };
-  $scope.changeBackgroundColour = function() {
-    var x = document.getElementsByClassName("gradient-container");
-    x.style.backgroundColor = "blue";
+  $scope.myObj = {
+    "color" : "red",
+    // "background-color" : "coral",
+    // "font-size" : "60px",
+    // "padding" : "50px"
+  };
+  $scope.color = function () {
+    return Math.floor(Math.random() * 256 );
   };
 });
