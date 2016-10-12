@@ -1,8 +1,36 @@
-.accordion-container {
+.app-container {
   width: 400px;
   margin: 20px auto;
 }
 
 .well.well-lg {
   margin-bottom: 0;
+}
+
+button.gradient-collapse {
+
+}
+
+div.gradient-container {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  border-radius: 0;
+}
+
+.btn-group.gradient{
+
+top: 265px;
+}
+
+button.cookie-collapse{
+
+}
+
+div.cookie-container{
+
+}
+
+btn-group.cookie{
+
 }
