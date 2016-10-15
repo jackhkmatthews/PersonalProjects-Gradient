@@ -21,6 +21,22 @@ div.gradient-container {
   border-radius: 0;
 }
 
+div.rgbColor1 {
+  color: black;
+  position: absolute;
+  top: 85px;
+  width: 400px;
+  text-align: center;
+}
+
+div.rgbColor2 {
+  color: black;
+  position: absolute;
+  bottom: 254px;
+  width: 400px;
+  text-align: center;
+}
+
 .btn-group.gradient{top: 125px;left: 137px;}
 
 button.cookie-collapse{border-radius: 0px;}

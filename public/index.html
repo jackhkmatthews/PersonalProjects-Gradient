@@ -20,12 +20,13 @@
       <hr>
       <button type="button" class="btn btn-default gradient-collapse" ng-click="isCollapsed = !isCollapsed">GRADIENT</button>
       <div uib-collapse="isCollapsed">
-        <div class="well well-lg gradient-container" ng-style="gradientContainerStyles">
+        <div class="well well-lg gradient-container" ng-style="gradientStylesObject.ngStyleSyntax">
           <div class="btn-group gradient">
-            <button class="btn btn-primary refresh" ng-click="gradientContainerStyles.background = getRgbLinearGradient()">Refresh</button>
-            <button class="btn btn-primary rgba" ng-click="ShowRgbValues = !ShowRgbValues">rgba</button>
+            <button class="btn btn-primary refresh" ng-click="gradientStylesObject = getGradientStylesObject()">Refresh</button>
+            <button class="btn btn-primary rgba" ng-click="ShowRgbValues = !ShowRgbValues">rgb</button>
           </div>
-          <pre ng-show="ShowRgbValues">{{gradientContainerStyles}}</pre>
+          <div class="rgbColor1" ng-show="ShowRgbValues">{{gradientStylesObject.rgbColor1}}</div>
+          <div class="rgbColor2" ng-show="ShowRgbValues">{{gradientStylesObject.rgbColor2}}</div>
         </div>
         <button type="button" class="btn btn-default cookie-collapse" ng-click="isCollapsed2 = !isCollapsed2" style="width: 100%;">COOKIE</button>
         <div uib-collapse="isCollapsed2">
