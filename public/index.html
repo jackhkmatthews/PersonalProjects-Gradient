@@ -4,13 +4,16 @@
     <script src="vendor/angular.js"></script>
     <script src="vendor/angular-animate.js"></script>
     <script src="vendor/angular-sanitize.js"></script>
+    <script src="vendor/angular-cookies.js"></script>
     <script src="vendor/ui-bootstrap-tpls-2.2.0.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/directives/tube-visualiser.js"></script>
     <script src="scripts/controllers/ButtonsCtrl.js"></script>
     <script src="scripts/controllers/CollapseDemoCtrl.js"></script>
     <script src="scripts/controllers/mainCtrl.js"></script>
+    <script src="scripts/controllers/cookieCtrl.js"></script>
     <link href="vendor/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
   </head>
   <body>
@@ -22,19 +25,19 @@
       <div uib-collapse="isCollapsed">
         <div class="well well-lg gradient-container" ng-style="gradientStylesObject.ngStyleSyntax">
           <div class="btn-group gradient">
-            <button class="btn btn-primary refresh" ng-click="gradientStylesObject = getGradientStylesObject()">Refresh</button>
-            <button class="btn btn-primary rgba" ng-click="ShowRgbValues = !ShowRgbValues">rgb</button>
+            <button class="btn btn-primary refresh" ng-click="gradientStylesObject = getGradientStylesObject()">refresh</button>
+            <button class="btn btn-primary rgb" ng-click="ShowRgbValues = !ShowRgbValues">rgb</button>
           </div>
           <div class="rgbColor1" ng-show="ShowRgbValues">{{gradientStylesObject.rgbColor1}}</div>
           <div class="rgbColor2" ng-show="ShowRgbValues">{{gradientStylesObject.rgbColor2}}</div>
         </div>
         <button type="button" class="btn btn-default cookie-collapse" ng-click="isCollapsed2 = !isCollapsed2" style="width: 100%;">COOKIE</button>
         <div uib-collapse="isCollapsed2">
-          <div class="well well-lg cookie-container" ng-style="cookieContainerStyles">
+          <div class="well well-lg cookie-container" ng-controller="cookieCtrl" ng-style="gradient">
           <div class="btn-group cookie">
-            <button class="btn btn-primary update">Update</button>
-            <button class="btn btn-primary save">Save</button>
-            <button class="btn btn-primary delete">Delete</button>
+            <button class="btn btn-primary update" ng-click="updateCookie()">Update</button>
+            <button class="btn btn-primary save" ng-click="saveCookie()">Save</button>
+            <button class="btn btn-primary delete" ng-click="deleteCookie()">Delete</button>
           </div>
           </div>
         </div>

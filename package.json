@@ -19,6 +19,7 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-animate": "^1.2.32",
+    "angular-cookies": "^1.5.8",
     "angular-sanitize": "^1.2.32",
     "angular-touch": "^1.2.32",
     "angular-ui-bootstrap": "^2.2.0",
