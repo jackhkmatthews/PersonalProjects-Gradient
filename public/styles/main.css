@@ -124,3 +124,7 @@ button.delete {
   margin-left: 0px !important;
   border-left: 0px;
 }
+
+img.cookies {
+  height: 72%;
+}
